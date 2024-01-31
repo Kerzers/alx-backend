@@ -6,7 +6,7 @@ from base_caching import BaseCaching
 
 class LIFOCache(BaseCaching):
     """
-    FIFOCache defines a FIFO caching system
+    LIFOCache defines a LIFO caching system
     """
 
     def __init__(self):
