@@ -19,9 +19,6 @@ babel = Babel(app)
 @babel.localeselector
 def get_locale():
     """determine the best match with our supported languages"""
-    loc = request.args.get('locale')
-    if loc in app.config['LANGUAGES']:
-        return loc
     return request.accept_languages.best_match(['en', 'fr'])
 
 
@@ -32,4 +29,4 @@ def index() -> str:
 
 
 if __name__ == '__main__':
-    app.run(port="5000", host="0.0.0.0", debug=True)
+    app.run(debug=True)
